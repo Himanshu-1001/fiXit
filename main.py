@@ -9,7 +9,7 @@ class Query(BaseModel):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://fi-xit.vercel.app"],
+    allow_origins=["http://localhost:3000", "https://fixit-khaki.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
