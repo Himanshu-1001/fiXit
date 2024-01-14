@@ -33,18 +33,15 @@
     transition: color 0.1s ease-in-out;
     /* color Transition  */
     opacity: 1;
-    /* Initial opaque */
+    /* Initially opaque */
     color: black;
-    /* Initial dark color */
+    /* Initially dark */
 }
 
-/* animation class */
 .banner-content h1.animating span {
     animation: bannerAnimation 2s forwards;
-    /* bannerAnimation */
 }
 
-/* Keyframes for reveal animation */
 @keyframes bannerAnimation {
     0% {
         opacity: 0.2;

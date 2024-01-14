@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Banner from './components/Navbar/Banner/Banner';
+import Search from './components/Search/Search';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Banner />} />
-          <Route path='/chat' element={<Banner />} />
+          <Route path='/chat' element={<Search />} />
         </Routes>
       </BrowserRouter>
   );

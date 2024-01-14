@@ -6,7 +6,10 @@ import { useGoogleLogin } from '@react-oauth/google'
 
 export default function Navbar() {
   const handleLogin = useGoogleLogin({
-    onSuccess: codeResponse => console.log(codeResponse)
+    onSuccess: codeResponse => {
+      console.log(codeResponse)
+      window.location.href = '/chat'
+    }
   });
 
   return (
