@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+from utils import generate_response
 app = FastAPI()
 
 class Query(BaseModel):
@@ -9,7 +9,7 @@ class Query(BaseModel):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "https://fi-xit.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -22,5 +22,5 @@ def read_root():
 
 @app.post("/bot")
 def interact_with_bot(query: Query):
-    response = f"Bot says: {query.info}"
+    response=generate_response(query.info)
     return {"response": response}

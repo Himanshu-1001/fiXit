@@ -12,6 +12,7 @@ export default function Search() {
         try {
             const res = await fetchQuery('/bot', { info: search });
             setBotResponse(res.response);
+            setSearch('');
         } catch (error) {
             console.error(error);
             setBotResponse('');
