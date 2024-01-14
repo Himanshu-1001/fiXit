@@ -22,9 +22,9 @@ export default function Banner() {
       }, delay);
 
       // Increase delay for the next heading
-      delay += text.length * 300 + 1000; // Assuming 500ms per letter and 1000ms for delay between headings
+      delay += text.length * 300 + 1000;
     });
-  }, []); // Empty dependency array to run the effect only once after the component is mounted
+  }, []);
 
   return (
     <div className="banner">
